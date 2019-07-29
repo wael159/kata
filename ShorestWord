@@ -1,0 +1,21 @@
+function ShortestWord(word) { 
+  // convert into an array of words - use split method 
+  var wordArr = word.split(" "); 
+  
+  // create a new array that stores the length of the string at each element 
+  var lengthArr = []; 
+  for (var i = 0; i < wordArr.length; i++) {
+    lengthArr[i] = wordArr[i].length; 
+  }
+  
+  // return the lowest length in the new array 
+  var lowestNum = lengthArr[0]; 
+  for (var j = 0; j < lengthArr.length; j++) {
+    if (lengthArr[j] < lowestNum) {
+      lowestNum = lengthArr[j]; 
+    }
+  }
+  
+  return lowestNum; 
+  
+}
